@@ -1,9 +1,11 @@
+const morgan = require('morgan')
 const express = require('express')
 const app = express()
 
 app.use(express.json())
+app.use(morgan('tiny'))
 
-// phonebook data
+// phonebook data. 
 let phonebook = [
   { id: "1", name: "Arto Hellas", number: "040-123456" },
   { id: "2", name: "Ada Lovelace", number: "39-44-5323523" },
